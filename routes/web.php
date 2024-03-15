@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/registration', [App\Http\Controllers\RegistrationController::class, 'registrationForm']);
-Route::post('/registration', [App\Http\Controllers\RegistrationController::class, 'store']);
+Route::get('/registration', [App\Http\Controllers\RegistrationController::class, 'registrationForm'])->name('registration_form');
+Route::post('/registration', [App\Http\Controllers\RegistrationController::class, 'store'])->name('registration_store');
 
 Route::group(['middleware' => 'auth:api'], function () {
     Route::get('/ability_page', [App\Http\Controllers\UserController::class, 'abilityPage'])->name('ability_page');

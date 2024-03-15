@@ -13,7 +13,7 @@
                 </ul>
             </div>
         @endif
-        <form method="POST" action="/registration">
+        <form method="POST" action="{{ route('registration_store') }}">
             @csrf
             <div>
                 <label for="name">Username:</label>
